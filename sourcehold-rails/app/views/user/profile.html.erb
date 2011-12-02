@@ -1,0 +1,21 @@
+<% form_tag("repo") do %>
+  <%= text_field_tag :name %>
+  <%= submit_tag "New Repo" %>
+<% end %>
+<h2>Public Repositories</h2>
+<ul>
+<% @user.repositories.each do |r| %>
+  <% if r.public then %>
+    <li><a href="<%= "/#{current_user.username}/#{r.name}/tree/master" %>"><%= r.name %></a> </li>
+  <% end %>
+<% end %>
+</ul>
+
+<h2>Private Repositories</h2>
+<ul>
+<% @user.repositories.each do |r| %>
+  <% if !r.public then %>
+    <li><a href="<%= "/#{current_user.username}/#{r.name}/tree/master" %>"><%= r.name %></a></li>
+  <% end %>
+<% end %>
+</ul>

@@ -1,0 +1,8 @@
+<div class="all-sent-messages">
+  <% if(!@messages.empty?) %>
+    <%= render :partial => "messages_list", :object => @messages %>
+  <% else %>
+    You have no messages in your inbox.
+  <% end %>
+</div>
+<%= render :partial => "message_menu" %>

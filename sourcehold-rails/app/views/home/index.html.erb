@@ -1,0 +1,38 @@
+<% title "Public and Private Git Repository Hosting - Sourcehold" %>
+<% meta_description "Unlimited Public and Private Git Repository hosting. With collaboration and project management for each repository." %>
+<div class="sourcehold-index">
+  <h2>Helping You Become a Better Developer</h2>
+  <div class="tag-line">
+    Developing tools and services to help developers get better at what they do best, developing software.
+  </div>
+  <div class="recent-blog-posts">
+    <h3><%= link_to "Latest Blog Posts", "/blog" %></h3>
+    <% @blog_posts.each do |p| %>
+      <div class="post">
+        <%= link_to p.title, "/blog/#{p.id}/#{p.urlized_title}" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="index-features">
+    <div class="source-control">
+      Source Control Management
+    </div>
+    <div class="code-browsing">
+      <h3>Browse Source Code Online</h3>
+      Take a look through alll of the code in your projects and review the good, the bad, and the ugly.
+    </div>
+    <div class="unlimited-repos">
+      <h3>Unlimited Public and Private Git</h3>
+      Host as many repositories as you want public or private so no need to limit yourself.
+    </div>
+    <div class="growth">
+      <h3>Growth</h3>
+      Services and products that grow with you and your business. Sourcehold is here to provide the services you need as you need them.
+    </div>
+    <div class="collaborate">
+      <h3>Easily Collaborate With Others</h3>
+      Easily collaborate with each other so your software can be even better than it was.
+    </div>
+  </div>
+</div>
+

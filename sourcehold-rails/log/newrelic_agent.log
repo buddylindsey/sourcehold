@@ -1,0 +1,6 @@
+# Logfile created on 2011-12-02 15:59:35 -0600 by logger.rb/25413
+[12/02/11 15:59:35 -0600 rinji.local (78887)] INFO : Dispatcher: webrick
+[12/02/11 15:59:35 -0600 rinji.local (78887)] INFO : Application: My Application
+[12/02/11 15:59:35 -0600 rinji.local (78887)] WARN : Agent configured not to send data in this environment - edit newrelic.yml to change this
+[12/02/11 15:59:35 -0600 rinji.local (78887)] INFO : New Relic RPM Agent 3.0.1 Initialized: pid = 78887
+[12/02/11 15:59:35 -0600 rinji.local (78887)] INFO : Agent Log found in /Users/percent20/Programming/Sourcehold/sourcehold-rails/log/newrelic_agent.log

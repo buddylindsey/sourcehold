@@ -1,0 +1,7 @@
+<div id="commits-paging">
+  <% if(params[:page].nil?) %>
+    <%= link_to "next page", "/#{params[:user]}/#{params[:repo]}/commits/#{params[:branch]}?page=2", { :class => "next-page" } %>
+  <% else %>
+    <%= link_to "prev page", "/#{params[:user]}/#{params[:repo]}/commits/#{params[:branch]}?page=#{params[:page].to_i - 1}", { :class => "next-page" } %> - <%= link_to "next page", "/#{params[:user]}/#{params[:repo]}/commits/#{params[:branch]}?page=#{params[:page].to_i + 1}", { :class => "next-page" } %>
+  <% end %>
+</div>

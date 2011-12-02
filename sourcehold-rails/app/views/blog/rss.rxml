@@ -1,0 +1,19 @@
+xml.instruct! :xml, :version => "1.0"
+
+xml.rss :version => "2.0" do
+  xml.channel do
+    xml.title "Sourcehold Blog"
+    xml.description "News, How-to's, and Updates"
+    xml.link "http://sourcehold.com/blog" 
+
+    @posts.each do |post|
+      xml.item do
+        xml.title post.title
+        xml.description (post.body)
+        xml.pubDate post.created_at.to_s(:rfc822)
+        xml.link "http://sourcehold.com/blog/#{post.id}/#{post.title.gsub(' ', '-').downcase}" 
+        xml.guid "http://sourcehold.com/blog/#{post.id}/#{post.title.gsub(' ', '-').downcase}"
+      end
+    end
+  end
+end

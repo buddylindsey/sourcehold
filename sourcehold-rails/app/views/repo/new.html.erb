@@ -1,0 +1,16 @@
+<h3>Create Repository</h3>
+<%= form_tag(addrepo_path) do %>
+  <p>
+  <%= label_tag 'repo_name', "Repo Name" %>
+  <%= text_field_tag :repo_name %>
+</p>
+<p>
+  public
+  <%= radio_button_tag 'public', true %>
+  private
+  <%= radio_button_tag 'public', false, true %>
+  </p>
+  <p>
+  <%= submit_tag "New Repo" %>
+  </p>
+<% end %>

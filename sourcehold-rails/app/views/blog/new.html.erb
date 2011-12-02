@@ -1,0 +1,12 @@
+<div class="new-blog-post-container">
+  <%= form_tag("/blog") do %>
+    <div>
+      Title: <%= text_field_tag :title %>
+    </div>
+    <div>
+      Body:<br />
+      <%= text_area_tag :body %>
+    </div>
+    <%= submit_tag "Publish" %>
+  <% end %>
+</div>

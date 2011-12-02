@@ -1,0 +1,51 @@
+<div class="profile-banner">
+  <img src="<%= @user.avatar %>" /><span class="profile-banner-text"><%= @user.username %>'s Profile</span>
+</div>
+<% if(!@user.profile.nil?) %>
+  <h3>Profile Information</h3>
+  <table class="profile-table">
+    <tr>
+      <td class="profile-label">Name</td>
+      <td>
+        <%= @user.profile.fullname %>
+      </td>
+    </tr>
+    <tr>
+      <td class="profile-label">Site</td>
+      <td>
+        <%= link_to @user.profile.website, @user.profile.website %>
+      </td>
+    </tr>
+    <tr>
+      <td class="profile-label">Company</td>
+      <td>
+        <%= @user.profile.company %>
+      </td>
+    </tr>
+    <tr>
+      <td class="profile-label">Location</td>
+      <td>
+        <%= @user.profile.location %>
+      </td>
+    </tr>
+    <tr>
+      <td class="profile-label">Alt. Contact</td>
+      <td>
+        <%= @user.profile.alternate_contact %>
+      </td>
+    </tr>
+  </table>
+<% end %>
+
+<h3>Public Repositories</h3>
+<% if(@user.repositories.empty?) %>
+  No Public Repositories
+<% else %>
+  <ul class="repositories-list">
+    <% @user.repositories.each do |r| %>
+      <% if r.public then %>
+        <li class="repo-public"><a href="<%= "/#{@user.username}/#{r.name}" %>"><%= r.name %></a></li>
+      <% end %>
+    <% end %>
+  </ul>
+<% end %>

@@ -1,0 +1,17 @@
+<% if((info = information_checker).any?) %>
+  <div class="information">
+    <div class="close-information-div">
+      x
+    </div>
+    <% if(info.has_key?(:keys)) %>
+      <div class="information-data">
+        It appears you do not have an SSH Key associated with your account. Please visit your <%= link_to "Account Settings", account_home_path %> to <%= link_to "Add an SSH Key", account_ssh_path %>. 
+      </div>
+    <% end %>
+    <% if(info.has_key?(:repos)) %>
+      <div class="information-data">
+        You do not have any repositories at this time. Please visit <%= link_to "Add Repo", new_repo_path %> to add a new repository.
+      </div>
+    <% end %>
+  </div>
+<% end %>

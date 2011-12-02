@@ -1,0 +1,55 @@
+<div class="code-menu-user-misc">
+  <ul>
+    <li class="code-menu-download"><%= link_to "Download", "/#{params[:user]}/#{params[:repo]}/archives" %></li>
+    <% if(signed_in?) %>
+      <% if !@user_repos.include? params[:repo] then %>
+        <li class="code-menu-fork"><%= link_to "Fork", fork_repo_path %></li>
+      <% end %>
+    <% end %>
+    <% if signed_in? %>
+      <% if(params[:user] == current_user.username) %>
+        <li><%= link_to "Admin", "/#{params[:user]}/#{params[:repo]}/admin", { :class => "code-browser-main-menu-admin" } %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+<div class="code-menu-user-header">
+  <span class="user-avatar-code-page"><img src="<%= user_avatar(params[:user]) %>" class="user-avatar-image" /></span>
+  <%= link_to params[:user], "/#{params[:user]}" %>
+</div>
+<div class="code-menu-repo-header">
+  <div class="repo-name">
+    <%= link_to params[:repo], "/#{params[:user]}/#{params[:repo]}" %>
+  </div>
+</div>
+<div class="code-menu-main-content">
+  <ul id="code-browser-main-menu">
+    <li class="<%= if(determine_current_page_is_source) then "active-menu-page" end %>"><%= link_to 'Source', "/#{params[:user]}/#{params[:repo]}" %></li>
+    <li class="<%= if(determine_current_page_is_commits) then "active-menu-page" end %>"><%= link_to 'Commits', "/#{params[:user]}/#{params[:repo]}/commits/master" %></li>
+  </ul>
+  <div class="code-menu-url-info">
+    <% if(signed_in?) %>
+      <% if(can_access_repo?) %>
+        <div class="repo-branches">
+          <%= render "branches_select", :object => @branches %>
+        </div>
+        SSH
+        <%= text_field_tag "git_url", "git@sourcehold.com:#{params[:user]}/#{params[:repo]}.git", {:disabled => true} %>
+
+      <% else %>
+        <div class="repo-branches">
+          <%= render "branches_select", :object => @branches %>
+        </div>
+        Git
+        <%= text_field_tag "git_url", "git://sourcehold.com/#{params[:user]}/#{params[:repo]}.git", {:disabled => true} %>
+
+      <% end %>
+    <% else %>
+      <div class="repo-branches">
+        <%= render "branches_select", :object => @branches %>
+      </div>
+      Git
+      <%= text_field_tag "git_url", "git://sourcehold.com/#{params[:user]}/#{params[:repo]}.git", {:disabled => true} %>
+    <% end %>
+  </div>
+</div>

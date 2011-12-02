@@ -1,0 +1,45 @@
+<div class="account-settings-header">
+  <h2>Account Settings</h2>
+</div>
+<div id="account-edit-password">
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+    <%= devise_error_messages! %>
+    <div id="account-edit-password-labels">
+      <div class="email">
+        <%= f.label :email, "Primary Email" %>
+      </div>
+      <div class="password">
+        <%= f.label :password %>
+      </div>
+      <div class="password-confirm">
+        <%= f.label :password_confirmation %>
+      </div>
+      <div class="current-password">
+        <%= f.label :current_password %>
+      </div>
+    </div>
+    <div id="account-edit-password-textfield">
+      <div class="email">
+        <%= f.email_field :email %>
+      </div>
+      <div class="password">
+        <%= f.password_field :password %><span class="info">(leave blank if you don't want to change it)</span>
+      </div>
+      <div class="password-confirm">
+        <%= f.password_field :password_confirmation %>
+      </div>
+      <div class="current-password">
+        <%= f.password_field :current_password %><span class="info">(we need your current password to confirm your changes)</span>
+      </div>
+    </div>
+    <%= f.submit "Update" %>
+  <% end %>
+</div>
+<div id="account-settings-selection">
+  <ul>
+    <li><%= link_to "Edit Profile", "/account/profile" %></li>
+    <li><%= link_to "Add SSH Key", "/account/ssh" %></li>
+    <li class="account-active-page"><%= link_to "Edit Account", "/account/admin" %></li>
+    <li><%= link_to "Manage Emails", "/account/email" %></li>
+  </ul>
+</div>

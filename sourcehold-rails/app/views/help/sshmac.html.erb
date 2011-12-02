@@ -1,0 +1,33 @@
+<div class="help-container">
+  <h1>SSH on Mac</h1>
+  <div class="install-git-on-mac">
+    There are a lot of different ways to install git on OS X. The recommended way is either with <a href="http://mxcl.github.com/homebrew/">Homebrew</a> or <a href="http://www.macports.org/">MacPorts</a>.
+  </div>
+  <div class="generate-mac-ssh-key">
+    <h2>Create SSH Key</h2>
+    <ol>
+      <li>open Terminal</li>
+      <li>mkdir ~/.ssh</li>
+      <li>cd ~/.ssh</li>
+      <li>ssh-keygen -t rsa -C "name@email.com"</li>
+      <li>Enter a passphrase (remember it)</li>
+      <li>Your key should be generated</li>
+    </ol>
+  </div>
+  <div class="get-ssh-key">
+    <h2>Get Your SSH Key</h2>
+    <ol>
+      <li>Open Terminal</li>
+      <li>cat ~/.ssh/id_rsa.pub | pbcopy</li>
+    </ol>
+  </div>
+  <div class="add-ssh-key-to-account">
+    <h2>Add SSH Key to Account</h2>
+    <ol>
+      <li>Visit <%= link_to "add ssh key", "/account/ssh" %> in your <%= link_to "account settings", "/account" %></li>
+      <li>Click Add Key</li>
+      <li>Give the key a name</li>
+      <li>Paste the key you copied into the key text field</li>
+    </ol>
+  </div>
+</div>

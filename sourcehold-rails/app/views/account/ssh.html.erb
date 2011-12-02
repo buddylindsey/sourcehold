@@ -1,0 +1,39 @@
+<div class="account-settings-header">
+  <h2>Account Settings</h2>
+</div>
+<div id="account-help" class="information">
+  <div id="account-help-title">
+    SSH Help
+  </div>
+  For more information on getting and adding your ssh keys visit our <%= link_to "ssh help page", "/help/ssh" %> for <%= link_to "windows", "/help/ssh/windows" %> and <%= link_to "mac", "/help/ssh/mac" %>.
+</div>
+<div id="account-add-ssh">
+  <div class="current-account-ssh-keys">
+    <% current_user.authorized_keys.each do |a| %>
+      <div class="ssh-key-title" onclick="show_key('<%= a.name %>')"><%= a.name %></div>
+      <div class="actual-key <%= a.name %>">
+        <div class="the-key">
+          <%= a.key %>
+        </div>
+        <%= button_to "remove", { :action => "destroy", :id => a.id, :controller => "authkey" }, :confirm => "Are you sure you want to remove the autorized key?", :method => :delete %>
+      </div>
+    <% end %>
+  </div>
+  <div class="add-key-button">Add Key</div>
+  <div class="add-ssh-key-form">
+    <%= form_tag(authkey_path) do %>
+      <div class="ssh-key-form-name">Name <%= text_field_tag :name %></div>
+      <div class="ssh-key-form-key">Key<br />
+        <%= text_area_tag :key %></div>
+      <p><%= submit_tag "Add Key" %></p>
+    <% end %>
+  </div>
+</div>
+<div id="account-settings-selection">
+  <ul>
+    <li><%= link_to "Edit Profile", "/account/profile" %></li>
+    <li class="account-active-page"><%= link_to "SSH Key", "/account/ssh" %></li>
+    <li><%= link_to "Edit Account", "/account/admin" %></li>
+    <li><%= link_to "Manage Emails", "/account/email" %></li>
+  </ul>
+</div>

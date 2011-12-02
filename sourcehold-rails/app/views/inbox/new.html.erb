@@ -1,0 +1,9 @@
+<div class="compose-message-form">
+  <%= form_tag "/inbox" do %>
+    <%= text_field_tag 'user_to', nil, :placeholder => "Username" %><br />
+    <%= text_field_tag 'subject', nil, :placeholder => "Subject" %><br />
+    <%= text_area_tag 'body' %>
+    <%= submit_tag 'send' %>
+  <% end %>
+</div>
+<%= render :partial => "message_menu" %>

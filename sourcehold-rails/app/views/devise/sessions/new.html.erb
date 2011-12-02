@@ -1,0 +1,11 @@
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+<div id="devisesignin">
+<%= f.email_field :email %>
+<%= f.password_field :password %>
+<%= f.submit "Sign in" %>
+</div>
+<% end %>
+<div id="sharedlinks">
+<%= render :partial => "devise/shared/links" %>
+</div>
+

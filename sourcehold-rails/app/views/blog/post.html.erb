@@ -1,0 +1,26 @@
+<%= render "post", :object => @post %>
+<div class="blog-post-comments-container">
+  <div class="blog-post-comments">
+    <% @post.blog_comments.each do |c| %>
+      <div class="blog-comment-header">
+        <img src="<%= c.user.avatar %>" />
+        <span class="blog-comment-header-username"><%= link_to c.user.username, "/#{c.user.username}" %></span>
+      </div>
+      <div class="blog-comment-body">
+        <%= c.body %>
+      </div>
+    <% end %>
+  </div>
+  <% if(user_signed_in?) %>
+    <div class="blog-post-comment-form">
+      <%= form_tag("/blog/comment") do %>
+        <%= text_area_tag "body" %>
+        <br />
+        <%= hidden_field_tag "post_id", @post.id %>
+        <%= submit_tag "Leave Comment" %>
+      <% end %>
+    </div>
+  <% else %>
+    Please <%= link_to "login", new_user_session_path %> to comment.
+  <% end %>
+</div>

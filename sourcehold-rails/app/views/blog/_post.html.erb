@@ -1,0 +1,19 @@
+<div class="blog-post-container">
+  <div class="blog-post-title"><%= link_to @post.title, "/blog/#{@post.id}/#{@post.urlized_title}" %></div>
+  <div class="blog-post-metadata">
+    <table>
+      <tr>
+        <td><img src="<%= @post.user.avatar %>" class="blog-post-avatar" /></td>
+        <td>
+          <span class="blog-post-poster"><%= link_to @post.user.username, "/#{@post.user.username}" %></span>
+          posted on:
+          <span class="blog-post-date"><%= @post.created_at %></span> - 
+          <%= @post.blog_comments.count %> comments
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="blog-post-body">
+    <%= raw(@post.body) %>
+  </div>
+</div>

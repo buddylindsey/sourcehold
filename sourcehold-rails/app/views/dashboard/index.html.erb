@@ -1,0 +1,22 @@
+<h2>Dashboard</h2>
+<%= render "shared/information_box" %>
+<div id="main-dashboard">
+  <% if(!@user.repositories.empty?) %>
+    <ul class="repositories-list">
+      <% @user.repositories.each do |r| %>
+        <li class="repo-<%= css_class_public(r.public) %>"><a href="<%= "/#{@user.username}/#{r.name}" %>"><%= r.name %></a></li>
+      <% end %>
+    </ul>
+  <% else %>
+    You do not have any repositories yet. <%= link_to "Create a Repository", "/repo/new" %>
+  <% end %>
+
+  <% if(!@user.permissions.empty?) %>
+    <h3>Shared Repositories</h3>
+    <ul class="repositories-list">
+      <% @user.permissions.each do |p| %>
+        <li class="repo-<%= css_class_public(p.repo.public) %>"><a href='<%= "/#{p.repo.owner.username}/#{p.repo.name}"%>'><%= p.repo.name %></a></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

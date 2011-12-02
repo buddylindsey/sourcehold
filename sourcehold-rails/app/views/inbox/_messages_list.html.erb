@@ -1,0 +1,16 @@
+<% @messages.each do |m| %>
+  <div class="sent-message-container">
+    <div class="sent-message-header">
+      <%= link_to "#{m.sender.username}", "/#{m.sender.username}" %> - <%= link_to m.subject, "/inbox/message/#{parent(m)}" %>
+    </div>
+    <div class="sent-message-body">
+      <%= m.body %>
+    </div>
+    <div class="inbox-index-avatar">
+      <img src="<%= m.sender.avatar %>" />
+    </div>
+    <div class="sent-message-metadata">
+      Sent: <%= m.created_at.strftime("%A, %B %d - %Y at %I%P") %>
+    </div>
+  </div>
+<% end %>

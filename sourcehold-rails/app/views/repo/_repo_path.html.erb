@@ -1,0 +1,17 @@
+<div id="repopath">
+  <ul>
+    <% breadcrumb = generate_breadcrumb(request.fullpath) %>
+    <a href="/<%= breadcrumb["username"]  %>/<%= "#{breadcrumb['repo']}"  %>"><%= breadcrumb["repo"] %></a> 
+    <% lilPathCounter="/"+breadcrumb["username"]+"/"+breadcrumb["repo"]+"/tree" %>
+    <% breadcrumb["pathArray"].each do |p| %>
+      <% if(p!=params[:branch]) %>
+        <% if(breadcrumb["pathArray"].last == p)%>
+          / <%=h p %>
+        <%else%>
+          / <a href="<%= lilPathCounter %>/<%= p %>"><%=h p %></a>
+        <% end %>
+      <% end %>
+      <% lilPathCounter+="/"+p %> 
+    <% end %>
+  </ul>
+</div>

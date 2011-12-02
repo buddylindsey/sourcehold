@@ -1,0 +1,40 @@
+<div class="show-all-messages">
+  Subject: <%= @parent.subject %>
+  <hr />
+  <div>
+    <div class="show-message-header">
+      <div class="show-message-user">
+        <%= link_to @parent.sender.username, "/#{@parent.sender.username}" %>
+      </div>
+      <div class="show-message-avatar">
+        <img src="<%= @parent.sender.avatar %>" />
+      </div>
+    </div>
+    <div class="show-message-body">
+      <%= @parent.body %>
+    </div>
+  </div>
+  <% if(!@child_messages.empty?) %>
+    <% @child_messages.each do |c| %>
+      <div class="show-message-header">
+        <div class="show-message-user">
+          <%= link_to c.sender.username, "/#{c.sender.username}" %>
+        </div>
+        <div class="show-message-avatar">
+          <img src="<%= c.sender.avatar %>" />
+        </div>
+      </div>
+      <div class="show-message-body">
+        <%= c.body %>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="message-reply-form">
+    <%= form_tag message_reply_path  do %>
+      <%= hidden_field_tag 'parent', @parent.id %>
+      <%= text_area_tag 'reply_field' %><br />
+      <%= submit_tag 'Reply' %>
+    <% end %>
+  </div>
+</div>
+<%= render :partial => "message_menu" %>

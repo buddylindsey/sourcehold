@@ -1,0 +1,112 @@
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20110423050648)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110423050648')[0m
+Migrating to CancanRoles (20110423051343)
+  [1m[35mSQL (0.5ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110423051343')[0m
+Migrating to UsersHaveAndBelongToManyRoles (20110423051515)
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "roles_users" ("role_id" integer, "user_id" integer) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110423051515')[0m
+Migrating to AddUsernameToUsers (20110423053851)
+  [1m[35mSQL (0.5ms)[0m  ALTER TABLE "users" ADD "username" varchar(255)
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110423053851')[0m
+Migrating to CreateRepositories (20110425020734)
+  [1m[35mSQL (0.5ms)[0m  CREATE TABLE "repositories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "name" varchar(255), "public" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110425020734')[0m
+Migrating to CreateAuthorizedKeys (20110427193238)
+  [1m[35mSQL (0.8ms)[0m  CREATE TABLE "authorized_keys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "key" text, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110427193238')[0m
+Migrating to CreatePermissions (20110429021026)
+  [1m[35mSQL (0.5ms)[0m  CREATE TABLE "permissions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "repository_id" integer, "permission" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110429021026')[0m
+Migrating to RepositoryAddSizeColumn (20110504054857)
+  [1m[35mSQL (1.3ms)[0m  ALTER TABLE "repositories" ADD "size" varchar(255)
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110504054857')[0m
+Migrating to CreateMessages (20110621225926)
+  [1m[35mSQL (0.5ms)[0m  CREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "to_id" integer, "subject" varchar(255), "body" text, "parent" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110621225926')[0m
+Migrating to CreateProfiles (20110623034053)
+  [1m[35mSQL (0.6ms)[0m  CREATE TABLE "profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "fullname" varchar(255), "company" varchar(255), "website" varchar(255), "location" varchar(255), "alternate_contact" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110623034053')[0m
+Migrating to CreateEmails (20110624062828)
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "emails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "email_address" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110624062828')[0m
+Migrating to CreateBlogPosts (20110807220226)
+  [1m[35mSQL (30.4ms)[0m  CREATE TABLE "blog_posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "published" boolean, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110807220226')[0m
+Migrating to CreateBlogComments (20110807220503)
+  [1m[35mSQL (8.7ms)[0m  CREATE TABLE "blog_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "post_id" integer, "body" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110807220503')[0m
+Migrating to CreateActionLogs (20110825044344)
+  [1m[35mSQL (0.5ms)[0m  CREATE TABLE "action_logs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "action" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110825044344')[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("action_logs")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("authorized_keys")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("blog_comments")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("blog_posts")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("emails")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("messages")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("permissions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("profiles")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("repositories")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("roles")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("roles_users")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+Starting the New Relic Agent.
+NewRelic Agent Developer Mode enabled.
+To view performance information, go to http://localhost:3000/newrelic
+Installed New Relic Browser Monitoring middleware
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-02 15:59:42 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mBlogPost Load (0.6ms)[0m  SELECT "blog_posts".* FROM "blog_posts" ORDER BY created_at DESC LIMIT 5
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered home/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 172ms (Views: 15.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-02 15:59:49 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mBlogPost Load (0.3ms)[0m  [1mSELECT "blog_posts".* FROM "blog_posts" ORDER BY created_at DESC LIMIT 5[0m
+Rendered layouts/_footer.html.erb (1.6ms)
+Rendered home/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 54ms (Views: 14.4ms | ActiveRecord: 0.3ms)

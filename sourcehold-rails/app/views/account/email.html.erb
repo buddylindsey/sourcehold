@@ -1,0 +1,28 @@
+<div class="account-settings-header">
+  <h2>Account Settings</h2>
+</div>
+<div id="account-settings-email">
+  <% if(!@emails.empty?) %>
+    <div class="account-emails">
+      <ul>
+        <% @emails.each do |e| %>
+          <li><img src="<%= e.avatar %>" /><%= e.email_address %> - <a href="/email/<%= e.id %>" class="del_email" data-method="delete" rel="nofollow"><img src="/images/email_delete.png" /></a></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form_tag("/email", :method => :post) do %>
+    <%= label_tag :email, "Email" %>
+    <%= text_field_tag :email, nil, :id => "add_new_email" %>
+    <%= submit_tag "Add" %>
+  <% end %>
+</div>
+<div id="account-settings-selection">
+  <ul>
+    <li><%= link_to "Edit Profile", "/account/profile" %></li>
+    <li><%= link_to "SSH Key", "/account/ssh" %></li>
+    <li><%= link_to "Edit Account", "/account/admin" %></li>
+    <li class="account-active-page"><%= link_to "Manage Emails", "/account/email" %></li>
+  </ul>
+</div>

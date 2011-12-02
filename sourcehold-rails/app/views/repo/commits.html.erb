@@ -1,0 +1,19 @@
+<% title "Commits for #{params[:user]}/#{params[:repo]}" %>
+<%= render "code_browser_menu", :object => @user_repos %>
+<% if(@repo_commits.empty?) %>
+  Sorry, there are no commits at this time
+<% else %>
+  <table>
+    <% @repo_commits.each do |c| %>
+      <tr>
+        <td>
+          <%= render "committer_name" , :object => (@author = c.author) %>
+        </td>
+        <td>
+          <%= link_to c.message, "/#{params[:user]}/#{params[:repo]}/commit/#{c.id}" %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render "commits_page_paging" %>
+<% end %>

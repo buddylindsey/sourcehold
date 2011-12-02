@@ -1,0 +1,25 @@
+<% title "#{params[:user]}/#{params[:repo]} - Sourcehold" %>
+<%= render "code_browser_menu" %>
+<%= render "repo_path" %>
+<div id="code">
+  <table cellpadding="0" cellspacing="0">
+    <% if(syntax_highlight_code(@blob) == "binary") %>
+      <tr>
+        <td>
+        </td>
+        <td width="100%">
+          This is a binary file
+        </td>
+      </tr>
+    <% else %>
+      <tr>
+        <td class="line-numbers-table-data">
+          <%= render :partial => 'code_line_numbers', :locals => { :lines => @blob.data.lines.count } %>
+        </td>
+        <td width="100%">
+          <%= raw(syntax_highlight_code(@blob)) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

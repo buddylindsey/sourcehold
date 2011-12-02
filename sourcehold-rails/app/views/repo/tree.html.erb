@@ -1,0 +1,22 @@
+<% title "#{params[:user]}/#{params[:repo]} - Sourcehold" %>
+<%= render "code_browser_menu", :object => @user_repos %>
+<%= render "repo_path" %>
+<table id="files" cellspacing="0" cellpadding="0">
+  <tr>
+    <th></th>
+    <th>Filename</th>
+  </tr>
+  <% @tree.trees.each do |t| %>
+    <tr>
+      <td class="file-browser-icon" width="20px"><img src="/images/folder.png" width="20px" /></td>
+      <td><%= link_to t.name, generate_repo_url(params[:user], params[:repo], "tree", params[:branch], params[:path], t.name) %></td>
+    </tr>
+  <% end %>
+  <% @tree.blobs.each do |b| %>
+    <tr>
+      <td class="file-browser-icon" width="20px"><img src="/images/file.png" width="20px" /></td>
+      <td><%= link_to b.name, generate_repo_url(params[:user], params[:repo], "blob", params[:branch], params[:path], b.name) %></td>
+      <td></td>
+    </tr>
+  <% end %>
+</table>

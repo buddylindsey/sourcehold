@@ -1,0 +1,12 @@
+<%= render "code_browser_menu", :object => @user_repos %>
+
+<% @commit.diffs.each do |d| %>
+  <div class="commit-container">
+    <div class="commit-header">
+      <%= d.a_path %>
+    </div>
+    <div class="commit-data">
+      <%= raw(diff_highlight(d)) %>
+    </div>
+  </div>
+<% end %>

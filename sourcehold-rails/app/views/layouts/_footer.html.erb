@@ -1,0 +1,61 @@
+<div class="whole-footer">
+  <div class="main-footer">
+    <div id="feedback-form">
+      <%= form_tag("/beta-feedback", :method => :post) do %>
+        <%= label_tag :content, "Give Feedback" %><br />
+        <%= hidden_field_tag 'path', request.fullpath %>
+        <%= text_area_tag :content %><br />
+        <%= submit_tag "Send Feedback" %>
+      <% end %>
+    </div>
+    <div class="footer-all-links">
+      <div class="footer-documentation-links">
+        <div class="footer-link-header">Documentation</div>
+        <ul>
+          <li><%= link_to "Getting Started", "/help/getting_started" %></li>
+          <!-- <li>Learning Git</li> -->
+          <li>Why Git?</li>
+        </ul>
+      </div>
+      <div class="footer-link-content">
+        <div class="footer-site-links">
+          <div class="footer-link-header">Sourcehold</div>
+          <ul>
+            <li><%= link_to "About", "/about" %></li>
+            <li><%= link_to "Blog", "/blog" %></li>
+            <li><a href="mailto:buddy@sourcehold.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    Copyright &copy; 2011 Sourcehold All Rights Reserved | <%= link_to "Terms of Service", "/terms" %> | <%= link_to "Privacy", "/privacy" %><!-- | Security -->
+  </div>
+</div>
+<% if(Rails.env == "production") %>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-805005-14']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+</script>
+<!-- EYE --> 
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://capturedknowledge.com/eye/" : "http://capturedknowledge.com/eye/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 5);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://capturedknowledge.com/eye/piwik.php?idsite=5" style="border:0" alt="" /></p></noscript>
+<!-- End EYE Tracking Code -->
+
+ <% end %>

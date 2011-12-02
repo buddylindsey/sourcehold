@@ -1,0 +1,29 @@
+<ul id="branch-list">
+  <% if(request.path_parameters[:action] == "commits" ) %>
+    <% @branches.each do |b| %>
+      <% if(b == params[:branch]) %>
+        <li class="active-branch"><%= link_to b, "/#{params[:user]}/#{params[:repo]}/commits/#{b}" %></li>
+      <% else %>
+        <li class="inactive-branch"><%= link_to b, "/#{params[:user]}/#{params[:repo]}/commits/#{b}" %></li>
+      <% end %>
+    <% end %>
+  <% elsif(request.path_parameters[:action] == "commit") %>
+  <% else %>
+    <% if(params[:branch].nil?) %>
+      <li class="active-branch"><%= link_to "master", "/#{params[:user]}/#{params[:repo]}/tree/master" %></li>
+      <% @branches.each do |b| %>
+        <% if(b != "master") %>
+          <li class="inactive-branch"><%= link_to b, "/#{params[:user]}/#{params[:repo]}/tree/#{b}" %></li>
+        <% end %>
+      <% end %>
+    <% else %>
+      <% @branches.each do |b| %>
+        <% if(b == params[:branch]) %>
+          <li class="active-branch"><%= link_to b, "/#{params[:user]}/#{params[:repo]}/tree/#{b}" %></li>
+        <% else %>
+          <li class="inactive-branch"><%= link_to b, "/#{params[:user]}/#{params[:repo]}/tree/#{b}" %></li>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+</ul>

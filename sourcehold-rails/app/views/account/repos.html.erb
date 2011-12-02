@@ -1,0 +1,8 @@
+<h2>All of your repositories</h2>
+<% if(!current_user.repositories.empty?) %>
+<ul>
+  <% current_user.repositories.each do |r| %>
+    <li><%= link_to r.name, "/#{current_user.username}/#{r.name}" %></li>
+  <% end %>
+  </ul>
+<% end %>

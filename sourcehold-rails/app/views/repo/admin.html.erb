@@ -1,0 +1,44 @@
+<div id="top-content-area-bar">
+  <h2><%= @repo.name %> Repository Administration</h2>
+</div>
+<div class="repo-admin-properties">
+  <h3>Properties</h3>
+  <%= form_tag(updaterepo_path, :method => :put) do %>
+    <%= hidden_field_tag "repo_id", @repo.id %>
+    <%= label_tag 'repo_name', "Name" %>
+    <%= text_field_tag :repo_name, @repo.name, :disabled => true %>
+    <% if(@repo.public) %>
+      public <%= radio_button_tag 'public', true, true %>
+      private <%= radio_button_tag 'public', false %>
+    <% else %>
+      public <%= radio_button_tag 'public', true %>
+      private <%= radio_button_tag 'public', false, true %>
+    <% end %>
+    <%= submit_tag "update" %>
+  <% end %>
+</div>
+
+<div class="repo-admin-other-users">
+  <h3>Partners in Crime</h3>
+  <table>
+    <% @repo.permissions.each do |p| %>
+      <tr>
+        <td><img src="<%= p.user.avatar %>" /></td>
+        <td><a href="/<%= p.user.username %>"><%= p.user.username %></a></td>
+        <td><%= button_to "remove", { :action => "destroy", :id => p.id, :controller => "permission"}, :confirm => "You are about to remove #{p.user.username} from #{@repo.name} repository. Are you sure?", :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+  <h3>Add User to Repository</h3>
+  <%= form_tag(perm_path) do %>
+    <p>User: <%= text_field_tag :username %> Add user by username</p>
+    <%= hidden_field_tag :repo_id, @repo.id %>
+    <p><%= submit_tag "Add User" %></p>
+  <% end %>
+</div>
+
+<div class="repo-admin-delete">
+  <h3>Delete Repository</h3>
+  <%= button_to "Delete Repo", { :action => "destroy", :id => @repo.id, :controller => "repo" }, :confirm => "You cannot undo a delete. Are you sure?", :method => :delete %>
+  This permenantly deletes your repository. There is no undo, you cannot pass go, and you cannot collect $200 dollars. Be positive you want to delete this repository.
+</div>

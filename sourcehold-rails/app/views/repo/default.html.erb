@@ -1,0 +1,48 @@
+<% title "#{params[:user]}/#{params[:repo]} - Sourcehold" %>
+<%= render "code_browser_menu", :object => @user_repos %>
+<%= render "repo_path" %>
+<% if(@tree.contents.empty?) %>
+  <% if(current_user.username == params[:user]) %>
+    <div class="new-repo-repo">
+      Start Using New Repository
+      <ol>
+        <li>mkdir <%= params[:repo] %></li>
+        <li>cd <%= params[:repo] %></li>
+        <li>git init</li>
+        <li>git remote add origin git@sourcehold.com:<%= "#{params[:user]}/#{params[:repo]}.git" %></li>
+        <li>touch README</li>
+        <li>git add README</li>
+        <li>git commit -m 'adding README'</li>
+        <li>git push origin master</li>
+      </ol>
+      Add to Existing Repository
+      <ol>
+        <li>git remote add sourcehold git@sourcehold.com:<%= "#{params[:user]}/#{params[:repo]}.git" %></li>
+        <li>git push sourcehold master</li>
+      </ol>
+    </div>
+  <% else %>
+    <div class="new-repo-repo">
+      Sorry, it does not appear this person has added anything to their repository.
+    </div>
+  <% end %>
+<% else %>
+  <table id="files">
+    <tr>
+      <th></th>
+      <th>Filename</th>
+    </tr>
+    <% @tree.trees.each do |t| %>
+      <tr>
+        <td class="file-browser-icon" width="20px"><img src="/images/folder.png" width="20px" /></td>
+        <td><%= link_to t.name, generate_repo_url(params[:user], params[:repo], "tree", "master", nil, t.name) %></td>
+      </tr>
+    <% end %>
+    <% @tree.blobs.each do |b| %>
+      <tr>
+        <td class="file-browser-icon" width="20px"><img src="/images/file.png" width="20px" /></td>
+        <td><%= link_to b.name, generate_repo_url(params[:user], params[:repo], "blob", "master", nil, b.name) %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

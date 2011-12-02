@@ -1,0 +1,1451 @@
+div.source-control {
+  text-align: center;
+  font-size: 18px;
+  margin: 0px 0px 0px 0px;
+  padding: 10px 10px 10px 10px;
+  border-bottom: 1px gray dotted;
+}
+
+#content h3 {
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+#content div.main-content div.sourcehold-index h2 {
+  text-align: center;
+  font-size: 35px;
+  margin: 40px 0px 20px 0px;
+}
+
+div.tag-line{
+  text-align: center;
+}
+
+div.index-features {
+  width: 480px;	
+  margin: 30px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  font-size: 12px
+}
+
+div.recent-blog-posts h3{
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+div.recent-blog-posts {
+  margin: 30px 0px 0px 500px;
+  padding: 0px 0px 0px 20px;
+  position: absolute;
+  border-left: 1px gray dotted;
+  height: 250px;
+  width: 350px;
+}
+
+div.recent-blog-posts div.post{
+  margin: 10px 0px 10px 0px;
+}
+
+div.collaborate h3{
+  margin: 0px;
+  padding: 0px;
+}
+
+div.unlimited-repos h3{
+  margin: 0px;
+  padding: 0px;
+}
+
+div.collaborate {
+  margin: 20px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  width: 230px;
+  text-align: justify;
+}
+
+div.code-browsing h3{
+  margin: 0px;
+  padding: 0px;
+}
+
+div.growth h3{
+  margin: 0px;
+  padding: 0px;
+}
+
+div.growth {
+  margin: 20px 0px 0px 250px;
+  padding: 0px;
+  width: 230px;
+  position: absolute;
+  text-align: justify;
+}
+
+div.sourcehold-index {
+  width: 870px	
+}
+
+div.unlimited-repos {
+  margin: 10px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  width: 230px;
+  text-align: justify;
+}
+
+div.code-browsing {
+  margin: 10px 0px 0px 250px;
+  padding: 0px 0px 0px 0px;
+  width: 230px;
+  position: absolute;
+  text-align: justify;
+}
+
+div.help-container{
+  width: 870px;
+}
+
+div.ssh-key-title {
+  width: 400px;
+  margin:5px 5px 0px 0px; 
+  padding:5px;
+  border: 1px solid #160780;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+div#account-help {
+  font-size: 10px;
+  width: 200px;
+  position: absolute;
+  margin: 0px 0px 0px 650px;
+  padding: 5px;
+}
+
+div.current-account-ssh-keys {
+  width: 400px;
+}
+
+div.add-key-button {
+  cursor: pointer;
+  margin: 15px 5px 0px 0px;
+  padding: 5px 5px 5px 5px;
+  width: 500px;
+}
+
+div.add-ssh-key-form{
+  display: none;
+  margin: 5px 5px 5px 0px;
+  padding: 0px;
+  width: 425px;
+}
+
+div.actual-key{
+  display: none;
+  width: 400px;
+  margin: 0px 5px 5px 0px;
+  padding: 10px 5px 5px 5px;
+  border-bottom: 1px solid #160780;
+  border-left: 1px solid #160780;
+  border-right: 1px solid #160780;
+  text-align: left;
+  font-size: 12px;
+}
+
+div.the-key {
+  width: 400px;
+  word-wrap: break-word;
+}
+
+#account-add-ssh div.current-account-ssh-keys div.actual-key.Main form.button_to div input {
+  margin: 10px 0px 0px 0px;
+}
+
+.clear{
+  clear: both;
+}
+
+div.show-all-messages {
+  position: absolute;
+  margin: 0px 0px 0px 175px;
+  width: 700px
+}
+
+.profile-banner{
+  margin: 10px 0px 0px 0px;
+}
+
+.profile-banner-text{
+  font-size: 40px;
+  margin: 0px 0px 20px 20px;
+
+}
+
+div.profile-banner img {
+  border: 1px solid lightgray;
+  padding: 1px;
+  vertical-align: -12px;
+}
+
+a {
+  color: #160780;
+}
+a:visited {
+  color: #160780;
+}
+
+.main-content{
+  margin: 0px;
+  padding: 0px;
+}
+
+.main-content a{
+  text-decoration: none;
+}
+
+#code table tbody tr td.line-numbers-table-data span.ln {
+  padding: 0px 3px 0px 2px;	
+}
+
+div#account-settings-selection {
+  margin: 15px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  height: 350px;
+  width: 870px;
+}
+
+li.account-active-page{
+  background-color: #c5d2ff;
+  border-left: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  color: #black;
+}
+
+li.account-active-page a{
+  color: black;
+}
+
+div#account-add-ssh {
+  width: 425px;
+  position: absolute;
+  margin: 0px 0px 0px 200px;
+}
+
+div#account-help-title {
+  font-weight: bold;
+  font-size: 12px;
+  margin: 0px 0px 2px 0px;
+}
+
+#account-add-ssh div.add-ssh-key-form input#name {
+  width: 400px;
+  height: 20px;
+  margin: 0px 0px 15px 0px;
+}
+
+#account-add-ssh div.add-ssh-key-form form div.ssh-key-form-name {
+  margin: 0px 0px 0px 5px;
+}
+
+#account-add-ssh div.add-ssh-key-form form div.ssh-key-form-key {
+  margin: 0px 0px 0px 5px;
+}
+
+#account-settings-email div.account-emails ul li a.del_email img {
+  vertical-align: -3px;
+}
+
+#account-settings-email div.account-emails ul li img {
+  vertical-align: -2px;
+}
+
+#account-add-ssh div.add-ssh-key-form textarea#key {
+  width: 400px;
+  margin: 5px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  height: 125px;
+  vertical-align: -5px;
+}
+
+#account-settings-selection ul{
+  list-style-type: none;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  width: 150px;
+  border-right: 1px solid #6a55d5;
+}
+
+#account-settings-selection ul a{
+  text-decoration: none;
+}
+
+#account-settings-selection ul li {
+  padding: 5px 0px 5px 2px;
+  margin: 0px 0px 0px 0px;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+#container{
+
+}
+pre {
+  font-family: helvetica,arial,sans-serif;
+  font-size: 12px;
+  vertical-align: top;
+  margin: 0;
+  word-spacing: 2px;
+}
+
+
+div#everything {
+
+  width: 917px;
+  min-height: 456px;
+  margin: 0 auto;
+  padding: 0px 0px 0px 0px;
+  background: url(/images/headerbackground.png) no-repeat;
+}
+
+div#topbar {
+  float: left;
+  padding-top: 35px;
+  padding-left: 82px;
+  width: 824px;
+}
+
+div#topbar h1{
+  position: absolute;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+div#topbar ul#globalmenu {
+  float: right;
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+}
+
+div#topbar ul#globalmenu li{
+  list-style-type: none;
+  padding: 0px 0px 0px 10px;
+  margin: 0px;
+  display: inline;
+}
+
+.banner {
+  height: 75px;
+  margin: 10px 0px 0px 0px;
+  width: 100%;
+}
+
+#content{
+  padding: 0px 5px 5px 22px;
+  margin: 0px 0px 0px 0px;
+  z-index: 1;
+}
+
+#footer textarea#content {
+  margin: 10px 0px 10px 0px;
+  padding: 2px;
+  width: 300px;
+  height: 125px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#content div.main-content div.repo-admin-properties {
+  margin: 0px 0px 20px 0px;
+  padding: 0px 0px 0px 20px;
+}
+
+#content div.main-content div.repo-admin-delete {
+  margin: 0px 0px 20px 0px;
+  padding: 5px 5px 15px 20px;
+  border: solid 1px red;
+}
+
+#content div.main-content div.repo-admin-other-users table tbody tr td form.button_to div input {
+  border: 1px solid gray;
+  background-color: white;
+}
+
+#content div.main-content div.repo-admin-other-users table tbody tr td {
+  padding: 0px 10px 0px 10px;
+}
+
+#content div.main-content div.repo-admin-other-users table tbody tr td a {
+  text-decoration: none;
+}
+
+#content div.main-content div.repo-admin-other-users table tbody tr td img {
+  height: 12px;
+  width: 12px;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+#content div.main-content div.repo-admin-delete h3 {
+  margin:  10px 0px 20px 0px;
+  color: red;
+}
+
+#content div.main-content div.repo-admin-delete form.button_to div input {
+  margin: 0px 0px 20px 30px;
+  padding:  0px 0px 0px 0px;
+}
+
+#content div.main-content div.repo-admin-other-users {
+  margin: 0px 0px 20px 0px;
+  padding: 20px 0px 0px 20px;
+}
+
+#content h1 {
+  margin: 0px;
+  padding:  0px;
+}
+
+#content ul.repositories-list li {
+  list-style-type: none;
+  margin: 0;
+  padding: 2px 0 0 20px;
+}
+
+#content ul {
+  margin: 0;
+  padding-left: 15px;
+}
+
+#account-settings-email div.account-emails ul {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+#account-settings-email div.account-emails ul li{
+  list-style-type: none;
+  margin: 5px 0px 0px 0px;
+}
+
+#account-settings-email div.account-emails ul li img {
+  padding: 0px 5px 0px 0px;
+}
+
+#account-settings-email form {
+  margin: 10px 0px 0px 0px;
+}
+
+form#user_edit.user_edit {
+  width: 200px;
+  position: absolute;
+  margin: 0px 0px 0px 195px;
+}
+
+div#account-edit-password-labels {
+  width: 191px;	
+  position: absolute;
+  text-align: right;
+}
+
+div#account-edit-password-labels div{
+  height: 2em;
+}
+
+div#account-edit-password-textfield {
+  width: 472px;
+  margin: 0px 0px 0px 204px;
+}
+
+div#account-edit-password-textfield input {
+  margin-bottom: 10px;
+  height: 2em;
+}
+
+#account-edit-password-labels div.password {
+  margin: 5px 0px 0px 0px;
+}
+
+#account-edit-password-labels div.password-confirm {
+  margin: 5px 0px 0px 0px;
+}
+
+#account-edit-password-labels div.current-password {
+  margin: 5px 0px 0px 0px;
+}
+
+#account-edit-password-labels div.email {
+  margin: 5px 0px 0px 0px;
+}
+
+#account-edit-password-textfield div.password span.info {
+  font-size: 10px;
+  font-style: italic;
+}
+
+#account-edit-password-textfield div.current-password span.info {
+  font-size: 10px;
+  font-style: italic;
+}
+
+table#files {
+  margin: 0px 0px 0px 0px;
+  width: 870px;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid gray;
+  font-size: 14px;
+}
+
+#content table#files th{
+  border-bottom: black 1px solid;
+  text-align: left;
+}
+
+#topbar a:link {
+  text-decoration: none;
+}
+
+table.profile-table {
+  font-size: 15px;
+}
+
+td.profile-label {
+  color: gray;
+  font-size: 13px;
+  width: 100px;
+}
+
+div#user-repos-wrapper {
+  position: absolute;
+  height: 0px;
+  margin: 80px 0px 0px 0px;
+}
+
+div#user-repos {
+  width: 113px;
+  background: url(/images/sidebarbackground.png) no-repeat left top;
+  padding-left: 5px;
+  padding-top: 5px;
+  min-height: 356px;
+  position: relative;
+  left: -130px;
+  top: -10px;
+  font-size: 12px
+}
+
+#user-repos ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+#user-repos ul li {
+  list-style-type: none;
+  margin: 0px;
+  padding: 2px 0px 2px 0px;
+}
+
+#user-repos ul li a {
+  text-decoration: none;
+  color: gray;
+  margin-left: 4px;
+}
+
+.add-repo-li {
+  font-size: 10px;
+  margin: 0px 0px 0px 0px;
+  background: url(/images/add-repo-list.png) no-repeat;
+  padding: 0px 0px 0px 15px;
+  line-height: 0;
+}
+
+div#account-profile-update {
+  width: 651px;
+  position: absolute;
+  margin: 0px 0px 0px 187px;
+}
+
+#account-profile-update-labels {
+  width: 189px;
+  text-align: right;
+}
+
+div#account-settings-email {
+  width: 500px;
+  margin: 0px 0px 0px 250px;
+  position: absolute;
+}
+
+
+#account-profile-update-textboxs {
+  width: 319px;
+  position: absolute;
+  margin: 0px 0px 0px 210px;
+}
+
+#account-profile-update-textboxs input{
+  width: 250px;
+  display: block;
+  height: 2em;
+  margin-bottom: 3px;
+}
+
+#code{
+  overflow-x: auto;
+  width: 868px;
+  border: 1px solid gray;
+  margin: 0px 0px 0px 0px;
+  padding: 20px 0px 20px 0px;
+  font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+#codebrowsermenu{
+  padding: 0;
+  margin-top: -82px;
+  margin-right: 5px;
+  margin-bottom: 18px;
+}
+
+#codebrowsermenu a {
+  text-decoration: none;
+}
+
+#codebrowsermenu ul{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  margin: 5px 5px 5px -3px;
+  padding: 5px;
+}
+
+#codebrowsermenu ul li{
+  display: inline;
+  padding: 0px 5px 0px 5px;
+}
+
+.special{
+  padding: 5px 10px;
+  border: 1px solid Red;
+}
+
+#repopath ul{
+  list-style: none;
+  margin: 0px;
+  padding: 10px 10px 10px 10px;
+}
+
+div.code-menu-main-content {
+  padding: 15px 5px 11px;
+  width: 886px;
+  margin: 10px 0px 9px -12px;
+  background: #d1dfff url(/images/footer.png) 0 191px;
+}
+
+div#repopath {
+  margin: 0px 0px;
+  width: 870px;
+}
+
+#repopath ul li{
+  display: inline;
+}
+
+#codebrowsermenu div.themenu {
+  margin: 0 auto 0 0;
+  width: 99%;
+}
+
+input#git_url {
+  width: 350px;
+  height: 20px;
+  padding: 0px 0px 0px 1px;
+  font-size: 14px;
+  margin: 10px 0px 0px 5px;
+  border-style: solid;
+  border-color: #fff;
+}
+
+#codebrowsermenu div.gitcloneurl table {
+  margin: 0px;
+  padding: 0px;
+}
+
+div.gitcloneurl {
+
+}
+
+.repo-private{
+  background: url(/images/private.gif) no-repeat 1px 3px;
+}
+
+#main-dashboard ul.repositories-list li{
+  margin-top: 6px;
+}
+
+.repo-public{
+  background: url(/images/Public.png) no-repeat 1px 3px;
+}
+
+h2 {
+  margin: 10px 0px 10px 0px;	
+}
+
+#code table tbody tr td.line-numbers-table-data {
+  vertical-align:top;
+  text-align: right;
+  margin-right: 15px;
+  padding-left: 10px;
+  padding-right: 15px;
+}
+
+.ajax-does-exist{
+  border: 1px solid red;
+}
+
+.ajax-does-not-exist{
+  border: 1px solid green;
+}
+
+#codebrowsermenu div.gitcloneurl table tbody tr td div.code-menu-actions {
+  background-image: url(/images/repo-button-field.png);
+  border: 1px solid #ccc;
+  width: 450px;
+  height: 28px;
+  margin: 0px 0px 0px 0px;
+}
+
+#codebrowsermenu div.gitcloneurl table tbody tr td div.code-menu-actions ul{
+  maring: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+#codebrowsermenu div.gitcloneurl table tbody tr td div.code-menu-actions ul li{
+  padding: 0px 30px 0px 30px;
+  margin: 0px;
+}
+#codebrowsermenu div.gitcloneurl table tbody tr td div.code-menu-actions ul li a{
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  font-weight: bold;
+  color: black;
+}
+
+li.code-menu-download {
+  background: url(/images/download-icon.png) no-repeat 12px 2px;
+  padding: 0px 0px 0px 35px;
+  margin: 0px;
+}
+
+#content div.main-content div.code-menu-user-misc ul {
+  margin: 0px 0px 0px 0px;
+  list-style-type: none;
+  float: right;
+}
+
+div.code-menu-user-header {
+  width: 870px;
+  margin: 10px 0px 0px 0px;
+}
+
+div.code-menu-user-header a{
+  text-decoration: none;
+  font-size: 20px;
+  margin: 0px 0px 0px 10px;
+}
+
+div.code-menu-repo-header {
+  margin: 0px 0px 10px 0px;
+  padding: 0px 0px 0px 60px;
+  width: 810px;	
+}
+
+div.code-menu-repo-header a{
+  text-decoration: none;
+
+}
+
+#content div.main-content div.code-menu-user-misc {
+  width: 870px;
+}
+
+a.code-browser-main-menu-admin {
+  padding: 0px 0px 0px 10px;
+}
+
+#content div.main-content div.code-menu-user-misc ul li{
+  margin: 0px;
+  display: inline;
+}
+
+div.code-menu-user-misc a{
+  text-decoration: none;
+  font-size: 15px;
+}
+
+ul#code-browser-main-menu {
+  list-style-type: none;
+  margin: 0px 0px 10px 7px;
+  padding: 0px;
+}
+
+ul#code-browser-main-menu a{
+  text-decoration: none;
+  color: #feffff;
+}
+
+li.active-menu-page {
+  background-color: white;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+div#container li.active-menu-page a {
+  color: #000;
+}
+
+div.code-menu-url-info {
+  padding: 10px 0px 0px 0px;
+  margin: -41px 0px 0px 389px;
+  padding: 0px;
+  color: #feffff;
+}
+
+img.user-avatar-image {
+  height: 24px;
+  width: 24px;
+  border: 1px solid lightgray;
+  padding: 1px;
+  vertical-align: -7px;
+}
+
+ul#code-browser-main-menu li{
+  display: inline;
+  margin: 0px;
+  padding: 5px 5px 5px 5px;
+}
+
+#code-browser-main-menu li a.code-browser-main-menu-admin {
+  float: right;
+}
+
+li.code-menu-fork {
+  background: url(/images/fork.png) no-repeat 14px 1px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 30px;
+}
+
+div.inbox-index-avatar img {
+  height: 30px;
+  border: solid 1px lightgray;
+  padding: 2px;
+}
+
+div.sent-message-body {
+  position: absolute;
+  margin: 0px 0px 0px 45px;
+  font-size: 12px;
+  width: 500px;
+}
+
+div.sent-message-header {
+  margin: 0px 0px 5px 0px;
+  font-size: 15px;
+}
+
+div.all-sent-messages {
+  width: 500px;
+  position: absolute;
+  margin: 9px 0px 0px 229px;
+  padding: 5px 20px 0px 5px;
+}
+
+#content div.main-content div.compose-message-form {
+  width: 200px;
+  position: absolute;
+  margin: 12px 0px 0px 211px;
+}
+
+input#subject {
+  width: 500px;
+  margin-left: 2px;
+}
+
+input#user_to {
+  margin-bottom: 5px;
+  width: 195px;
+  margin-left: 2px;
+}
+
+
+
+textarea#body {
+  height: 200px;
+  width: 500px;
+  margin: 0px 0px 0px 2px;
+}
+
+div.inbox-message-menu {
+  width: 170px;
+  padding-top: 14px;
+}
+
+div.inbox-message-menu a{
+  text-decoration: none;
+}
+
+#content div.inbox-message-menu ul{
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+div.show-message-avatar img {
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+  border: 1px solid lightgray;
+}
+
+div.show-message-body {
+  margin: 0px 0px 0px 45px;
+  font-size: 12px;	
+}
+
+div.show-message-user a {
+  text-decoration: none;
+}
+
+div.show-message-header {
+  margin: 20px 0px 0px 0px;
+  padding: 5px 0px 0px 0px;
+  border-top: 1px solid lightgray;
+  font-size: 14px;
+}
+
+div.message-reply-form {
+  margin: 30px 0px 0px 0px;
+}
+
+textarea#reply_field {
+  width: 400px;
+  height: 150px;
+}
+
+div.show-message-user {
+  position: absolute;
+  margin: 0px 0px 0px 45px;
+}
+
+div.inbox-message-menu ul li{
+  padding: 0px;
+  margin:  0px 0px 5px 0px;
+  height: 2em;
+}
+
+div.sent-message-metadata {
+  margin: 2px 0px 10px 0px;
+  font-size: 10px;
+}
+
+div.sent-message-container {
+  padding: 5px 5px 5px 5px;
+  border-top: 1px solid lightgray;
+  width: 600px;
+}
+
+/*    pygments style     */
+.c { color: #408090; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #007020; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.cm { color: #408090; font-style: italic } /* Comment.Multiline */
+.cp { color: #007020 } /* Comment.Preproc */
+.c1 { color: #408090; font-style: italic } /* Comment.Single */
+.cs { color: #408090; background-color: #fff0f0 } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #303030 } /* Generic.Output */
+.gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0040D0 } /* Generic.Traceback */
+.kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.kp { color: #007020 } /* Keyword.Pseudo */
+.kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #902000 } /* Keyword.Type */
+.m { color: #208050 } /* Literal.Number */
+.s { color: #4070a0 } /* Literal.String */
+.na { color: #4070a0 } /* Name.Attribute */
+.nb { color: #007020 } /* Name.Builtin */
+.nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.no { color: #60add5 } /* Name.Constant */
+.nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.ne { color: #007020 } /* Name.Exception */
+.nf { color: #06287e } /* Name.Function */
+.nl { color: #002070; font-weight: bold } /* Name.Label */
+.nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.nt { color: #062873; font-weight: bold } /* Name.Tag */
+.nv { color: #bb60d5 } /* Name.Variable */
+.ow { color: #007020; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mf { color: #208050 } /* Literal.Number.Float */
+.mh { color: #208050 } /* Literal.Number.Hex */
+.mi { color: #208050 } /* Literal.Number.Integer */
+.mo { color: #208050 } /* Literal.Number.Oct */
+.sb { color: #4070a0 } /* Literal.String.Backtick */
+.sc { color: #4070a0 } /* Literal.String.Char */
+.sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #4070a0 } /* Literal.String.Double */
+.se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #4070a0 } /* Literal.String.Heredoc */
+.si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.sx { color: #c65d09 } /* Literal.String.Other */
+.sr { color: #235388 } /* Literal.String.Regex */
+.s1 { color: #4070a0 } /* Literal.String.Single */
+.ss { color: #517918 } /* Literal.String.Symbol */
+.bp { color: #007020 } /* Name.Builtin.Pseudo */
+.vc { color: #bb60d5 } /* Name.Variable.Class */
+.vg { color: #bb60d5 } /* Name.Variable.Global */
+.vi { color: #bb60d5 } /* Name.Variable.Instance */
+.il { color: #208050 } /* Literal.Number.Integer.Long */
+
+div.blog-post-container {
+  width: 600px;
+  font-size: 14px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px;
+}
+
+div.blog-post-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+div.blog-post-body {
+  margin: 10px 0px 0px 0px;
+  padding: 0px 10px 0px 10px;
+}
+
+img.blog-post-avatar {
+  height: 16px;
+  width: 16px;
+  padding: 1px;
+  border: 1px solid gray
+}
+
+span.blog-post-poster {
+  font-size: 16px;
+}
+
+div.blog-post-metadata {
+  border-bottom: 1px dotted gray;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 5px 0px;
+}
+
+span.blog-post-date {
+  font-weight: bold;
+}
+
+div.blog-post-title a{
+  color: #0958ff;
+}
+
+.clear{
+  clear: both;
+}
+
+div#footer {
+  width: 100%;
+  height: 240px;
+  font-size: 12px;
+  min-height: 240px;
+  background-color: #d1dfff;
+  padding: 10px 0px 0px 0px;
+  left: 0;
+  overflow: hidden;
+  color: #fffeff;
+  background-image: url(/images/footer.png);
+}
+
+div#footer a{
+  text-decoration: none;
+  color: #c2f5fe;
+}
+
+#footer div.copyright {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+}
+
+#footer #feedback-form form label {
+  margin: 0px 0px 0px 0px;
+}
+
+#footer div#feedback-form {
+  width: 350px;
+  position: relative;
+  float: right;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 30px;
+  border-left: 1px dotted gray;
+  height: 190px;
+}
+
+div.whole-footer{
+  height: 210px;
+  width: 870px;
+  margin: 0 auto;
+}
+
+div.footer-all-links {
+  height: 190px;
+  width: 490px;
+}
+
+div.main-footer {
+  maring: 20px 0px 0px 0px;
+}
+
+div.terms-of-service {
+  width: 870px;
+  font-size: 10px;
+}
+
+div.privacy-page {
+  width: 870px;
+  font-size: 10px;
+}
+
+div.information {
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 10px 15px 20px 0px;
+  padding: 5px 5px 5px 5px;
+  font-size: 12px;
+  background-color: #f8fc99;
+  border: 1px dashed brown;
+}
+
+div.information div.information-data {
+  margin: 10px 30px 10px 30px;
+}
+
+div.close-information-div {
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 8px;
+  float: right;
+  margin: 0px 0px 0px 0px;
+  padding: 1px;
+  border: 1px solid brown;
+}
+
+div.information a{
+  color: Blue;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+div.footer-site-links {
+  margin: 0px 0px 0px 0px;
+  width: 150px;
+}
+
+div.footer-link-header {
+  font-size: 16px;
+  border-bottom: 1px dotted gray;
+  margin: 0px 0px 5px 0px;
+  padding: 0px 0px 2px 10px;
+}
+
+div.footer-site-links ul{
+  margin: 0px 0px 0px 10px;
+  list-style-type: none;
+  padding: 0px;
+}
+
+div.footer-site-links ul li{
+  margin: 5px 0px 5px 0px;
+}
+
+div.footer-documentation-links{
+  width: 150px;
+  margin: 0px 0px 0px 220px;
+  position: absolute;
+}
+
+div.footer-documentation-links ul li{
+  margin: 5px 0px 5px 0px;
+}
+
+div.footer-documentation-links ul{
+  margin: 0px 0px 0px 10px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+div.commit-header {
+  margin: 0px 0px 0px 0px;
+  border: 1px solid gray;
+  padding: 5px 5px 5px 5px;
+
+}
+
+div.commit-container {
+  width: 870px;
+  overflow: hidden;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
+}
+
+div.commit-data {
+  border-bottom: solid gray 1px;
+  border-left:solid gray 1px;
+  border-right: solid gray 1px;
+  padding: 5px 5px 5px 5px;
+}
+
+div#devisesignup {
+  background: url(/images/signup.png) no-repeat left top;
+  width: 510px;
+  height: 341px;
+  margin-left: 180px;
+  margin-top: 10px;
+}
+
+#sharedlinks {
+  width: 349px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+div#devisesignup #user_username {
+  position: relative;
+  top: 98px;
+  left: 213px;
+  width: 220px;
+  height: 22px;
+  border-style: none;
+  background-image: none;
+  background-color: rgba(254,252,222,0);
+  font-size: 16px;
+}
+
+div#devisesignup #user_submit {
+  position: relative;
+  left: 293px;
+  top: 218px;
+  width: 150px;
+  opacity: 0;
+}
+
+div#devisesignup #user_email {
+  position: relative;
+  top: 141px;
+  width: 220px;
+  height: 22px;
+  border-style: none;
+  background-image: none;
+  background-color: rgba(254,252,222,0);
+  left: -14px;
+  font-size: 16px;
+}
+
+div#devisesignup #user_password {
+  position: relative;
+  top: 155px;
+  left: 213px;
+  width: 220px;
+  height: 22px;
+  border-style: none;
+  background-image: none;
+  background-color: rgba(254,252,222,0);
+  font-size: 16px;
+}
+
+div#devisesignup #user_password_confirmation {
+  position: relative;
+  top: 195px;
+  left: -14px;
+  width: 220px;
+  height: 22px;
+  border-style: none;
+  background-image: none;
+  background-color: rgba(254,252,222,0);
+  font-size: 16px;
+  clear: both;
+}
+
+div#devisesignin {
+  background: url(/images/signin.png) no-repeat left top;
+  width: 510px;
+  height: 306px;
+  margin-left: 180px;
+  margin-top: 10px;
+}
+
+div#devisesignin #user_submit {
+  position: relative;
+  left: 284px;
+  top: 171px;
+  width: 150px;
+  opacity: 0;
+}
+
+div#devisesignin #user_email {
+  position: relative;
+  top: 100px;
+  width: 228px;
+  height: 22px;
+  border-style: none;
+  background-image: none;
+  background-color: rgba(254,252,222,0);
+  left: 194px;
+  font-size: 16px;
+}
+
+div#devisesignin #user_password {
+  position: relative;
+  top: 142px;
+  left: -41px;
+  width: 228px;
+  height: 22px;
+  border-style: none;
+  background-image: none;
+  background-color: rgba(254,252,222,0);
+  font-size: 16px;
+}
+.field_with_errors {
+  display: inline;
+}
+
+#error_explanation {
+  width: 592px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 14px;
+}
+
+#error_explanation ul {
+  margin-left: 28px;
+}
+.field_with_errors input {
+  color: red;
+}
+
+#account-profile-update-labels label {
+  display: block;
+  padding-top: 5px;
+  margin-bottom: 8px;
+}
+
+input#add_new_email {
+  height: 2em;
+}
+
+
+div.blog-comment-header img {
+  width: 24px;
+  height: 24px;
+  padding: 1px;
+  border: lightgray 1px solid;
+}
+
+div.blog-comment-header {
+  margin: 15px 0px 0px 0px;
+}
+
+div.blog-post-comments {
+  margin: 0px 0px 0px 0px;
+  width: 870px;
+  margin: 0px 0px 10px 0px;
+}
+
+div.blog-comment-body {
+  margin: 5px 0px 0px 0px;
+  padding: 0px 0px 5px 0px;
+  border-bottom: 1px dotted lightgray;
+}
+
+span.blog-comment-header-username {
+  vertical-align: 5px;
+  font-size: 20px;
+}
+img.committer-avatar {
+  width: 24px;
+  margin: 0px 5px 0px 0px;
+  padding: 1px;
+  border: 1px lightgray solid;
+}
+
+div.committer-user span{
+  vertical-align: 8px
+}
+
+div#commits-paging {
+  font-size: 11px;
+  margin: 5px 0px 10px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+#commits-paging a.next-page {
+  margin: 0px;
+  padding: 3px;
+  border: lightgrey 1px solid;
+  text-decoration: underline;
+}
+
+li.inactive-branch{
+  display: none;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+}
+
+ul#branch-list {
+  width: 100px;
+  font-size: 12px;
+  list-style: none;
+}
+
+div.repo-branches {
+  width: 100px;
+  position: absolute;
+  float: right;
+  margin: 10px 0px 0px 380px;
+}
+
+div.code-menu-repo-header div.repo-name {
+  width: 100px;
+}
+
+ul#branch-list li{
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
+  padding: 3px;
+}
+
+li.active-branch{
+  border: 1px solid lightgray;
+}

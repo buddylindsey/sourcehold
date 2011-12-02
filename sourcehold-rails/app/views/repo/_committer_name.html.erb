@@ -1,0 +1,10 @@
+<% user = commit_user_by_email(@author) %>
+<% if(!user.nil?) %>
+  <div class="committer-user">
+    <img src="<%= user.avatar %>" class="committer-avatar" /><span clas="committer-name"><%= link_to @author.name, "/#{user.username}" %></span>
+  </div>
+<% else %>
+  <div class="committer-user">
+    <span clas="committer-name"><%= @author.name %></span>
+  </div>
+<% end %>
